@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Nuclear REST API",
-    "description": "This Api allow you to remotly control nuclear desktop app"
+    "description": "This Api allow you to remotely control nuclear desktop app"
   },
   "basePath": "/",
   "paths": {
@@ -14,7 +14,7 @@
         "description": "",
         "responses": {
           "200": {
-            "description": "Action successfull"
+            "description": "Action successful"
           },
           "500": {
             "description": "Internal server error"
@@ -31,7 +31,7 @@
         "description": "",
         "responses": {
           "200": {
-            "description": "Action successfull"
+            "description": "Action successful"
           },
           "500": {
             "description": "Internal server error"
@@ -48,7 +48,7 @@
         "description": "",
         "responses": {
           "200": {
-            "description": "Action successfull"
+            "description": "Action successful"
           },
           "500": {
             "description": "Internal server error"
@@ -82,7 +82,7 @@
         "description": "",
         "responses": {
           "200": {
-            "description": "Action successfull"
+            "description": "Action successful"
           },
           "500": {
             "description": "Internal server error"
@@ -99,7 +99,7 @@
         "description": "",
         "responses": {
           "200": {
-            "description": "Action successfull"
+            "description": "Action successful"
           },
           "500": {
             "description": "Internal server error"
@@ -116,7 +116,7 @@
         "description": "",
         "responses": {
           "200": {
-            "description": "Action successfull"
+            "description": "Action successful"
           },
           "500": {
             "description": "Internal server error"
@@ -133,7 +133,7 @@
         "description": "",
         "responses": {
           "200": {
-            "description": "Action successfull"
+            "description": "Action successful"
           },
           "500": {
             "description": "Internal server error"
@@ -150,7 +150,7 @@
         "description": "",
         "responses": {
           "200": {
-            "description": "Action successfull"
+            "description": "Action successful"
           },
           "500": {
             "description": "Internal server error"
@@ -167,7 +167,7 @@
         "description": "",
         "responses": {
           "200": {
-            "description": "Action successfull"
+            "description": "Action successful"
           },
           "500": {
             "description": "Internal server error"
@@ -184,7 +184,7 @@
         "description": "",
         "responses": {
           "200": {
-            "description": "Action successfull"
+            "description": "Action successful"
           },
           "500": {
             "description": "Internal server error"
@@ -201,7 +201,7 @@
         "description": "",
         "responses": {
           "200": {
-            "description": "Action successfull"
+            "description": "Action successful"
           },
           "500": {
             "description": "Internal server error"
@@ -243,7 +243,7 @@
         "description": "",
         "responses": {
           "200": {
-            "description": "Action successfull"
+            "description": "Action successful"
           },
           "500": {
             "description": "Internal server error"
@@ -301,7 +301,7 @@
         "description": "",
         "responses": {
           "200": {
-            "description": "Action successfull"
+            "description": "Action successful"
           },
           "500": {
             "description": "Internal server error"
@@ -348,7 +348,7 @@
         "description": "",
         "responses": {
           "200": {
-            "description": "Action successfull"
+            "description": "Action successful"
           },
           "500": {
             "description": "Internal server error"
@@ -469,7 +469,7 @@
         "description": "",
         "responses": {
           "200": {
-            "description": "Action successfull"
+            "description": "Action successful"
           },
           "500": {
             "description": "The playlist has not been removed"
@@ -548,7 +548,7 @@
         "description": "",
         "responses": {
           "200": {
-            "description": "Action successfull"
+            "description": "Action successful"
           },
           "500": {
             "description": "Internal server error"
@@ -594,7 +594,7 @@
         "description": "",
         "responses": {
           "200": {
-            "description": "Action successfull"
+            "description": "Action successful"
           },
           "500": {
             "description": "Internal server error"

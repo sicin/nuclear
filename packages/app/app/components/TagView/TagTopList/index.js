@@ -1,7 +1,7 @@
-import React from 'react';
 import { SmoothImage } from '@nuclear/ui';
-import classnames from 'classnames';
+import cx from 'classnames';
 import _ from 'lodash';
+import React from 'react';
 
 import styles from './styles.scss';
 
@@ -29,7 +29,7 @@ const TagTopList = ({ topList, onClick, header }) => (
               <SmoothImage src={_.last(item.image)['#text']} />
               <div className={styles.item_overlay}>
                 <div
-                  className={classnames(
+                  className={cx(
                     styles.item_name,
                     styles.other_item_name
                   )}

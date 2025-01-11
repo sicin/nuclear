@@ -1,27 +1,27 @@
-import React, { useState } from 'react';
-import classnames from 'classnames';
+import cx from 'classnames';
 import _, { head } from 'lodash';
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import React, { useState } from 'react';
+import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
 import { TFunction, useTranslation } from 'react-i18next';
-import { Icon } from 'semantic-ui-react';
-import { areEqual, FixedSizeList as List } from 'react-window';
 import AutoSizer from 'react-virtualized-auto-sizer';
+import { areEqual, FixedSizeList as List } from 'react-window';
+import { Icon } from 'semantic-ui-react';
 
 import { Playlist } from '@nuclear/core';
 import { StreamData } from '@nuclear/core/src/plugins/plugins.types';
 import { formatDuration, QueueItem } from '@nuclear/ui';
 
-import { PluginsState } from '../../reducers/plugins';
-import { QueueItem as QueueItemType, QueueStore } from '../../reducers/queue';
-import { SettingsState } from '../../reducers/settings';
 import { safeAddUuid } from '../../actions/helpers';
-import QueueMenu from './QueueMenu';
 import { PlayQueueActions } from '../../containers/PlayQueueContainer';
 import QueuePopupContainer from '../../containers/QueuePopupContainer';
 import { StreamVerificationContainer } from '../../containers/StreamVerificationContainer';
+import { PluginsState } from '../../reducers/plugins';
+import { QueueItem as QueueItemType, QueueStore } from '../../reducers/queue';
+import { SettingsState } from '../../reducers/settings';
+import QueueMenu from './QueueMenu';
 
-import styles from './styles.scss';
 import { QueueItemClone } from './QueueItemClone';
+import styles from './styles.scss';
 
 type PlayQueueProps = {
   actions: PlayQueueActions;
@@ -191,7 +191,7 @@ const PlayQueue: React.FC<PlayQueueProps> = ({
         onDragOver={onDragOverFile}
         onDrop={onDropFile}
         onDragLeave={onDragEndFile}
-        className={classnames(styles.play_queue_container, { compact: settings.compactQueueBar })}
+        className={cx(styles.play_queue_container, { compact: settings.compactQueueBar })}
       >
         <QueueMenu
           clearQueue={clearQueue}
@@ -222,7 +222,7 @@ const PlayQueue: React.FC<PlayQueueProps> = ({
         >
           {(droppableProvided, snapshot) => (
             <div
-              className={classnames(styles.play_queue_items, styles.fade_in, {
+              className={cx(styles.play_queue_items, styles.fade_in, {
                 [styles.file_dragged_over]: isFileHovered,
                 [styles.track_dragged_over]: snapshot.isDraggingOver
               })}

@@ -1,7 +1,7 @@
+import cx from 'classnames';
 import React from 'react';
-import { List, Icon } from 'semantic-ui-react';
-import classNames from 'classnames';
 import { useTranslation } from 'react-i18next';
+import { Icon, List } from 'semantic-ui-react';
 
 import styles from './styles.scss';
 
@@ -31,7 +31,7 @@ const EqualizerPresetList:React.FC<EqualizerPresetListProps> = ({ presets, onCli
             key={index}
             onClick={() => preset.id !== selected && onClickItem(preset.id)}
             className={
-              classNames(
+              cx(
                 styles.equalizer_item,
                 {
                   [styles.equalizer_click_item]: preset.id !== selected

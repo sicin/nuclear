@@ -1,54 +1,55 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router-dom';
+import { bindActionCreators } from 'redux';
 
-import classnames from 'classnames';
+import { PluginConfig } from '@nuclear/core';
+import cx from 'classnames';
 import Sound from 'react-hifi';
 import { withTranslation } from 'react-i18next';
-import { PluginConfig } from '@nuclear/core';
-import * as SearchActions from './actions/search';
+
+import * as ConnectivityActions from './actions/connectivity';
+import * as DownloadActions from './actions/downloads';
+import * as GithubContribActions from './actions/githubContrib';
+import * as ImportFavActions from './actions/importfavs';
+import * as NuclearConfigActions from './actions/nuclear/configuration';
 import * as PlayerActions from './actions/player';
 import * as PlaylistsActions from './actions/playlists';
 import * as PluginsActions from './actions/plugins';
 import * as QueueActions from './actions/queue';
-import * as SettingsActions from './actions/settings';
 import * as ScrobblingActions from './actions/scrobbling';
-import * as ImportFavActions from './actions/importfavs';
-import * as ConnectivityActions from './actions/connectivity';
-import * as GithubContribActions from './actions/githubContrib';
+import * as SearchActions from './actions/search';
+import * as SettingsActions from './actions/settings';
 import * as WindowActions from './actions/window';
-import * as NuclearConfigActions from './actions/nuclear/configuration';
-import * as DownloadActions from './actions/downloads';
 
 import './app.global.scss';
-import styles from './styles.scss';
 import compact from './compact.scss';
+import styles from './styles.scss';
 
 import Navbar from './components/Navbar';
-import VerticalPanel from './components/VerticalPanel';
 import Spacer from './components/Spacer';
+import VerticalPanel from './components/VerticalPanel';
 
 import HelpModalContainer from './containers/HelpModalContainer';
 import MainContentContainer from './containers/MainContentContainer';
+import MiniPlayerContainer from './containers/MiniPlayerContainer';
+import PlayerBarContainer from './containers/PlayerBarContainer';
 import PlayQueueContainer from './containers/PlayQueueContainer';
 import SearchBoxContainer from './containers/SearchBoxContainer';
-import PlayerBarContainer from './containers/PlayerBarContainer';
-import MiniPlayerContainer from './containers/MiniPlayerContainer';
 
+import ErrorBoundary from './containers/ErrorBoundary';
 import IpcContainer from './containers/IpcContainer';
+import ShortcutsContainer from './containers/ShortcutsContainer';
 import SoundContainer from './containers/SoundContainer';
 import ToastContainer from './containers/ToastContainer';
-import ShortcutsContainer from './containers/ShortcutsContainer';
-import ErrorBoundary from './containers/ErrorBoundary';
 
-import NavButtons from './components/NavButtons';
-import WindowControls from './components/WindowControls';
-import CommandPaletteReminder from './components/CommandPaletteReminder';
-import SidebarMenuContainer from './containers/SidebarMenuContainer';
-import { CommandPaletteContainer } from './containers/CommandPaletteContainer';
 import { hot } from 'react-hot-loader';
+import CommandPaletteReminder from './components/CommandPaletteReminder';
+import NavButtons from './components/NavButtons';
 import SidebarBrand from './components/SidebarBrand';
+import WindowControls from './components/WindowControls';
+import { CommandPaletteContainer } from './containers/CommandPaletteContainer';
+import SidebarMenuContainer from './containers/SidebarMenuContainer';
 
 @withTranslation('app')
 class App extends React.PureComponent {
@@ -120,7 +121,7 @@ class App extends React.PureComponent {
   renderRightPanel() {
     return (
       <VerticalPanel
-        className={classnames(styles.right_panel, {
+        className={cx(styles.right_panel, {
           [`${compact.compact_panel}`]: this.props.settings.compactQueueBar
         })}
       >
